@@ -76,6 +76,15 @@ while (x <= 4000000) {
   }
 }
 
-//console.log(x)
 console.log(sum)
+
+sum = 0
+for (let n of gen) {
+    if (n <= 4000000) {
+      if (n % 2 ===0) { sum += n }
+    } else {
+      break
+    }
+}
+
 
