@@ -51,16 +51,13 @@ console.log(
 )
 
 function* fibGenerator() {
-  var a = 0
-  var b = 1
-  var c = 1
+  let a = 0, b = 1, c = 0
 
   while (true) {
+    yield a
     c = a + b
     a = b
     b = c
-
-    yield c
   }
 }
 
@@ -87,4 +84,7 @@ for (let n of gen) {
     }
 }
 
+const I = require('immutable')
+const generator = I.Seq(fibGenerator())
 
+console.log(generator.takeWhile(n => n < 4000000).filter(n => n % 2 === 0).reduce((a, b) => a + b))
