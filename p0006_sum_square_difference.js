@@ -31,4 +31,4 @@ console.log(squareSumFunctional(10))
 
 const diff = n => R.subtract(squareSumFunctional(n), sumSquaresFunctional(n))
 
-console.log( diff(10))
+console.log( diff(100))
