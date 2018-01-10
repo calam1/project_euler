@@ -29,4 +29,4 @@ const functionalPrimeFactor = n => {
   R.reduce(funcPrimeFactors, n, R.range(2, Math.sqrt(n)))
 }
 
-console.log(functionalPrimeFactor(315))
+console.log(functionalPrimeFactor(315)) //3, 3, 5, 7
