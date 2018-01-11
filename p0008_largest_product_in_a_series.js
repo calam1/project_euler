@@ -1,3 +1,5 @@
+// thanks to https://stackoverflow.com/questions/42981714/my-solution-to-project-euler-8-not-working-anymore
+
 const sumX = (number, chunkSize) => {
   //let numberArray = number.split("")  
   //let x = numberArray.map((_,i,a) =>  a.slice(i, i + size))
@@ -8,7 +10,7 @@ const sumX = (number, chunkSize) => {
   return Math.max(...number.split("")
     .map((_, index, array) => array.slice(index, index + chunkSize))
     .slice(0, number.length - chunkSize + 1)
-    .map(slicedArray => slicedArray.reduce((a, b) => + a * + b)))
+    .map(slicedArray => slicedArray.reduce((a, b) => a * b)))
 
 }
 
@@ -34,5 +36,5 @@ const number =
 05886116467109405077541002256983155200055935729725\
 71636269561882670428252483600823257530420752963450"
 
-//console.log(sumX(number, 4))
-console.log(sumX(number, 13))
+//console.log(sumX(number, 4))  //5832
+console.log(sumX(number, 13))  //23514624000 
